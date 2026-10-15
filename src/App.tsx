@@ -437,7 +437,7 @@ function ProductsSection() {
     {
       name: 'Anillos de Oro',
       category: 'Anillos',
-      price: 'Consultar',
+      price: 'Gs. 250.000 - 1.500.000',
       description: 'Anillos en oro de diferentes quilates',
       icon: <RingIcon />,
       image: 'https://image.qwenlm.ai/generated-images/0a35c0ae-97aa-4222-91a3-20597ea7bde9/_result.png',
@@ -445,7 +445,7 @@ function ProductsSection() {
     {
       name: 'Cadenas y Collares',
       category: 'Collares',
-      price: 'Consultar',
+      price: 'Gs. 400.000 - 3.000.000',
       description: 'Cadenas de oro y plata de alta calidad',
       icon: <NecklaceIcon />,
       image: 'https://image.qwenlm.ai/generated-images/eb8bbc52-3480-4c09-82b5-8a3433849ea4/_result.png',
@@ -453,7 +453,7 @@ function ProductsSection() {
     {
       name: 'Pulseras de Plata',
       category: 'Pulseras',
-      price: 'Consultar',
+      price: 'Gs. 120.000 - 800.000',
       description: 'Pulseras en plata y oro para toda ocasión',
       icon: <BraceletIcon />,
       image: 'https://image.qwenlm.ai/generated-images/78f2ae4e-a7a2-4c46-84b5-9bf2241fe3b2/_result.png',
@@ -461,7 +461,7 @@ function ProductsSection() {
     {
       name: 'Aros y Pendientes',
       category: 'Pendientes',
-      price: 'Consultar',
+      price: 'Gs. 150.000 - 1.200.000',
       description: 'Aros en oro, plata y piedras preciosas',
       icon: <EarringIcon />,
       image: 'https://image.qwenlm.ai/generated-images/0be7f091-1b38-4f83-a798-d1979847b491/_result.png',
@@ -469,7 +469,7 @@ function ProductsSection() {
     {
       name: 'Relojes',
       category: 'Relojes',
-      price: 'Consultar',
+      price: 'Gs. 600.000 - 4.000.000',
       description: 'Relojes de diferentes marcas y estilos',
       icon: <WatchIcon />,
       image: 'https://image.qwenlm.ai/generated-images/60137e18-62a4-4ded-8ebf-643293d8049a/_result.png',
@@ -477,7 +477,7 @@ function ProductsSection() {
     {
       name: 'Reparación de Joyas',
       category: 'Servicios',
-      price: 'Consultar',
+      price: 'Desde Gs. 30.000',
       description: 'Reparación y confección de joyas a medida',
       icon: <BangleIcon />,
       image: 'https://image.qwenlm.ai/generated-images/2e3f240b-a1fe-45b7-a67b-bb427b565ce5/_result.png',
@@ -552,7 +552,9 @@ function ProductsSection() {
                 </h3>
                 <p className="text-white/40 text-xs sm:text-sm mb-3 sm:mb-4">{product.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-white text-sm sm:text-base md:text-lg font-light">{product.price}</span>
+                  <span className="text-white text-sm sm:text-base font-extralight tracking-wider italic">
+                    {product.price}
+                  </span>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

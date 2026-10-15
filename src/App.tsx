@@ -199,10 +199,12 @@ function HeroSection() {
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="mb-8"
+          className="mb-4"
         >
-          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 flex items-center justify-center floating">
-            <DiamondIcon />
+          <div className="w-16 h-16 mx-auto rounded-full border border-white/40 flex items-center justify-center floating">
+            <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
           </div>
         </motion.div>
 
@@ -211,7 +213,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          <span className="text-white/60 text-sm tracking-[0.5em] uppercase mb-4 block">
+          <span className="text-white/60 text-xs tracking-[0.5em] uppercase mb-2 block">
             Colección Exclusiva 2026
           </span>
         </motion.div>
@@ -220,7 +222,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-wide mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl font-extralight tracking-wide mb-4"
         >
           <span className="text-gradient">Elegancia</span>
           <br />
@@ -231,7 +233,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="text-lg md:text-xl text-white/50 font-light max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-sm md:text-base text-white/50 font-light max-w-xl mx-auto mb-6 leading-relaxed"
         >
           Descubre piezas únicas creadas con maestría artesanal. Cada joya cuenta una historia 
           de lujo, pasión y dedicación incomparable.
@@ -241,19 +243,19 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-24"
+          className="flex flex-col sm:flex-row gap-3 justify-center mb-16"
         >
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(11, 59, 59, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-[#0b3b3b] text-white text-sm tracking-widest uppercase border border-[#0f4f4f] hover:bg-[#0f4f4f] transition-all duration-300"
+            className="px-6 py-3 bg-[#0b3b3b] text-white text-xs tracking-widest uppercase border border-[#0f4f4f] hover:bg-[#0f4f4f] transition-all duration-300"
           >
             Explorar Colección
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05, borderColor: '#ffffff' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-transparent text-white text-sm tracking-widest uppercase border border-white/40 hover:border-white transition-all duration-300"
+            className="px-6 py-3 bg-transparent text-white text-xs tracking-widest uppercase border border-white/40 hover:border-white transition-all duration-300"
           >
             Ver Catálogo
           </motion.button>
@@ -265,14 +267,14 @@ function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-2"
+          className="w-5 h-8 border border-white/30 rounded-full flex justify-center pt-1.5"
         >
-          <div className="w-1 h-2 bg-white/70 rounded-full" />
+          <div className="w-0.5 h-1.5 bg-white/70 rounded-full" />
         </motion.div>
       </motion.div>
     </section>

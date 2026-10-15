@@ -15,6 +15,8 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -22,10 +24,35 @@
     background-color: #000000;
     color: #ffffff;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Safe area support for notched devices */
+  @supports (padding: env(safe-area-inset-top)) {
+    body {
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  /* Touch improvements */
+  @media (hover: none) and (pointer: coarse) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -34,11 +61,19 @@
 
   ::-webkit-scrollbar-thumb {
     background: #0b3b3b;
-    border-radius: 4px;
+    border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background: #0f4f4f;
+  }
+
+  /* Hide scrollbar on mobile for cleaner look */
+  @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
   }
 }
 
@@ -70,9 +105,12 @@
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(11, 59, 59, 0.3);
+  /* Disable hover lift on touch devices */
+  @media (hover: hover) {
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(11, 59, 59, 0.3);
+    }
   }
 
   .floating {
@@ -87,6 +125,13 @@
     border-radius: 50%;
     opacity: 0;
     animation: particleFloat 4s ease-in-out infinite;
+  }
+
+  /* Prevent image drag on mobile */
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-touch-callout: none;
   }
 }
 
@@ -109,4 +154,37 @@
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px rgba(11, 59, 59, 0.3); }
   50% { box-shadow: 0 0 40px rgba(11, 59, 59, 0.6); }
+}
+
+/* Responsive image optimization */
+@media (max-width: 640px) {
+  .product-card img {
+    object-position: center;
+  }
+}
+
+/* Landscape phone optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  #inicio {
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+  
+  #inicio h1 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Small phones (iPhone SE, etc.) */
+@media (max-width: 375px) {
+  .text-gradient {
+    font-size: inherit;
+  }
+}
+
+/* Tablet portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-card img {
+    height: 240px;
+  }
 }

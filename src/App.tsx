@@ -151,11 +151,11 @@ function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black/98 backdrop-blur-lg md:hidden flex flex-col items-center justify-center"
+            className="fixed inset-0 z-[60] bg-black/98 backdrop-blur-lg md:hidden flex flex-col items-center justify-center"
           >
             <motion.button
               onClick={() => setMenuOpen(false)}
-              className="absolute top-4 right-4 text-white p-2"
+              className="absolute top-4 right-4 text-white p-2 z-[70]"
               aria-label="Cerrar menú"
             >
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">

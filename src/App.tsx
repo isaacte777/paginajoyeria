@@ -109,8 +109,8 @@ function Navbar() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2"
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/70 flex items-center justify-center">
-              <span className="text-white text-sm sm:text-lg font-bold">N</span>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/70 flex items-center justify-center overflow-hidden">
+              <img src="/logo.png" alt="Nery Joyas Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-base sm:text-xl font-light tracking-[0.3em] text-white">NERY JOYAS</span>
           </motion.div>
@@ -602,9 +602,9 @@ function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
             <div className="flex items-center gap-2 mb-3 sm:mb-4 justify-center sm:justify-start">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/50 flex items-center justify-center">
-                <span className="text-white text-xs sm:text-sm font-bold">N</span>
-              </div>
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/50 flex items-center justify-center overflow-hidden">
+              <img src="/logo.png" alt="Nery Joyas Logo" className="w-full h-full object-cover" />
+            </div>
               <span className="text-base sm:text-lg font-light tracking-[0.3em] text-white">NERY JOYAS</span>
             </div>
             <p className="text-white/40 text-xs sm:text-sm font-light leading-relaxed max-w-xs mx-auto sm:mx-0">

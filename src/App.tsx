@@ -27,8 +27,8 @@ function Navbar() {
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2"
         >
-          <div className="w-10 h-10 rounded-full border-2 border-[#c9a96e] flex items-center justify-center">
-            <span className="text-[#c9a96e] text-lg font-bold">L</span>
+          <div className="w-10 h-10 rounded-full border-2 border-white/70 flex items-center justify-center">
+            <span className="text-white text-lg font-bold">L</span>
           </div>
           <span className="text-xl font-light tracking-[0.3em] text-white">LUXE</span>
         </motion.div>
@@ -41,8 +41,8 @@ function Navbar() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + i * 0.1 }}
-              whileHover={{ color: '#c9a96e' }}
-              className="text-sm tracking-widest uppercase text-white/80 hover:text-[#c9a96e] transition-colors duration-300"
+              whileHover={{ color: '#0f4f4f' }}
+              className="text-sm tracking-widest uppercase text-white/80 hover:text-white transition-colors duration-300"
             >
               {item}
             </motion.a>
@@ -76,7 +76,7 @@ function Navbar() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm tracking-widest uppercase text-white/80 hover:text-[#c9a96e] transition-colors"
+                className="text-sm tracking-widest uppercase text-white/80 hover:text-white transition-colors"
               >
                 {item}
               </a>
@@ -98,8 +98,8 @@ function HeroSection() {
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0b3b3b]/20 to-black" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#0b3b3b]/10 blur-[100px]" />
-        <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-[#c9a96e]/5 blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#0b3b3b]/15 blur-[100px]" />
+        <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-white/5 blur-[80px]" />
       </div>
 
       {/* Floating Particles */}
@@ -124,8 +124,8 @@ function HeroSection() {
           transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-8"
         >
-          <div className="w-24 h-24 mx-auto rounded-full border border-[#c9a96e]/50 flex items-center justify-center floating">
-            <svg className="w-12 h-12 text-[#c9a96e]" viewBox="0 0 24 24" fill="currentColor">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 flex items-center justify-center floating">
+            <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
           </div>
@@ -136,7 +136,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          <span className="text-[#c9a96e] text-sm tracking-[0.5em] uppercase mb-4 block">
+          <span className="text-white/60 text-sm tracking-[0.5em] uppercase mb-4 block">
             Colección Exclusiva 2026
           </span>
         </motion.div>
@@ -156,7 +156,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="text-lg md:text-xl text-white/60 font-light max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg md:text-xl text-white/50 font-light max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Descubre piezas únicas creadas con maestría artesanal. Cada joya cuenta una historia 
           de lujo, pasión y dedicación incomparable.
@@ -171,14 +171,14 @@ function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(11, 59, 59, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-[#0b3b3b] text-white text-sm tracking-widest uppercase rounded-none border border-[#0b3b3b] hover:bg-[#0f4f4f] transition-all duration-300"
+            className="px-8 py-4 bg-[#0b3b3b] text-white text-sm tracking-widest uppercase border border-[#0f4f4f] hover:bg-[#0f4f4f] transition-all duration-300"
           >
             Explorar Colección
           </motion.button>
           <motion.button
-            whileHover={{ scale: 1.05, borderColor: '#c9a96e' }}
+            whileHover={{ scale: 1.05, borderColor: '#ffffff' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-transparent text-[#c9a96e] text-sm tracking-widest uppercase border border-[#c9a96e]/50 hover:border-[#c9a96e] transition-all duration-300"
+            className="px-8 py-4 bg-transparent text-white text-sm tracking-widest uppercase border border-white/40 hover:border-white transition-all duration-300"
           >
             Ver Catálogo
           </motion.button>
@@ -197,7 +197,7 @@ function HeroSection() {
           transition={{ duration: 2, repeat: Infinity }}
           className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-2"
         >
-          <div className="w-1 h-2 bg-[#c9a96e] rounded-full" />
+          <div className="w-1 h-2 bg-white/70 rounded-full" />
         </motion.div>
       </motion.div>
     </section>
@@ -227,21 +227,21 @@ function WelcomeSection() {
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                    className="w-40 h-40 mx-auto border border-[#c9a96e]/30 rounded-full flex items-center justify-center"
+                    className="w-40 h-40 mx-auto border border-white/20 rounded-full flex items-center justify-center"
                   >
-                    <div className="w-28 h-28 border border-[#c9a96e]/50 rounded-full flex items-center justify-center">
+                    <div className="w-28 h-28 border border-white/30 rounded-full flex items-center justify-center">
                       <span className="text-5xl">💎</span>
                     </div>
                   </motion.div>
-                  <p className="mt-6 text-[#c9a96e]/60 text-sm tracking-[0.3em] uppercase">Desde 1985</p>
+                  <p className="mt-6 text-white/40 text-sm tracking-[0.3em] uppercase">Desde 1985</p>
                 </div>
               </div>
               <div className="absolute inset-0 shimmer" />
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 border-t border-l border-[#c9a96e]/30" />
-            <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b border-r border-[#c9a96e]/30" />
+            <div className="absolute -top-4 -left-4 w-20 h-20 border-t border-l border-white/20" />
+            <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b border-r border-white/20" />
           </motion.div>
 
           {/* Right - Text */}
@@ -251,7 +251,7 @@ function WelcomeSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
           >
-            <span className="text-[#c9a96e] text-sm tracking-[0.4em] uppercase mb-4 block">
+            <span className="text-[#0f4f4f] text-sm tracking-[0.4em] uppercase mb-4 block">
               Bienvenidos
             </span>
             <h2 className="text-4xl md:text-5xl font-extralight text-white mb-8 leading-tight">
@@ -259,7 +259,7 @@ function WelcomeSection() {
             </h2>
             <div className="space-y-6 text-white/60 font-light leading-relaxed">
               <p>
-                En <span className="text-[#c9a96e]">Luxe Joyería</span>, cada pieza es una obra maestra 
+                En <span className="text-white">Luxe Joyería</span>, cada pieza es una obra maestra 
                 que trasciende el tiempo. Desde 1985, hemos dedicado nuestra pasión a crear joyas 
                 que capturan la esencia de la elegancia y la sofisticación.
               </p>
@@ -377,7 +377,7 @@ function ProductsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-[#c9a96e] text-sm tracking-[0.4em] uppercase mb-4 block">
+          <span className="text-[#0f4f4f] text-sm tracking-[0.4em] uppercase mb-4 block">
             Nuestras Creaciones
           </span>
           <h2 className="text-4xl md:text-5xl font-extralight text-white mb-6">
@@ -398,11 +398,11 @@ function ProductsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="product-card group relative bg-gradient-to-br from-[#0b3b3b]/20 to-black border border-[#0b3b3b]/30 rounded-sm overflow-hidden"
+              className="product-card group relative bg-gradient-to-br from-[#0b3b3b]/20 to-black border border-white/10 rounded-sm overflow-hidden"
             >
               {/* Product Visual */}
               <div className="relative h-64 bg-gradient-to-br from-[#0b3b3b]/30 to-[#072a2a] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#c9a96e]/10 to-transparent" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white/5 to-transparent" />
                 <motion.span
                   className="text-6xl"
                   whileHover={{ scale: 1.2, rotate: 5 }}
@@ -410,23 +410,23 @@ function ProductsSection() {
                 >
                   {product.icon}
                 </motion.span>
-                <div className="absolute top-4 right-4 bg-[#0b3b3b] text-[#c9a96e] text-xs tracking-wider px-3 py-1 rounded-sm">
+                <div className="absolute top-4 right-4 bg-[#0b3b3b] text-white/80 text-xs tracking-wider px-3 py-1 rounded-sm border border-white/10">
                   {product.category}
                 </div>
               </div>
 
               {/* Product Info */}
               <div className="p-6">
-                <h3 className="text-xl font-light text-white mb-2 group-hover:text-[#c9a96e] transition-colors duration-300">
+                <h3 className="text-xl font-light text-white mb-2 group-hover:text-white transition-colors duration-300">
                   {product.name}
                 </h3>
-                <p className="text-white/50 text-sm mb-4">{product.description}</p>
+                <p className="text-white/40 text-sm mb-4">{product.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#c9a96e] text-lg font-light">{product.price}</span>
+                  <span className="text-white text-lg font-light">{product.price}</span>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 rounded-full border border-[#c9a96e]/50 flex items-center justify-center text-[#c9a96e] hover:bg-[#c9a96e] hover:text-black transition-all duration-300"
+                    className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/70 hover:bg-white hover:text-black transition-all duration-300"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -436,7 +436,7 @@ function ProductsSection() {
               </div>
 
               {/* Hover border effect */}
-              <div className="absolute inset-0 border border-[#c9a96e]/0 group-hover:border-[#c9a96e]/30 transition-all duration-500 rounded-sm pointer-events-none" />
+              <div className="absolute inset-0 border border-white/0 group-hover:border-white/20 transition-all duration-500 rounded-sm pointer-events-none" />
             </motion.div>
           ))}
         </div>
@@ -449,9 +449,9 @@ function ProductsSection() {
           className="text-center mt-16"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(201, 169, 110, 0.2)' }}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(11, 59, 59, 0.3)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 border border-[#c9a96e]/50 text-[#c9a96e] text-sm tracking-[0.3em] uppercase hover:bg-[#c9a96e]/10 transition-all duration-300"
+            className="px-10 py-4 border border-white/30 text-white text-sm tracking-[0.3em] uppercase hover:bg-white/5 transition-all duration-300"
           >
             Ver Toda la Colección
           </motion.button>
@@ -470,8 +470,8 @@ function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full border border-[#c9a96e] flex items-center justify-center">
-                <span className="text-[#c9a96e] text-sm font-bold">L</span>
+              <div className="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center">
+                <span className="text-white text-sm font-bold">L</span>
               </div>
               <span className="text-lg font-light tracking-[0.3em] text-white">LUXE</span>
             </div>
@@ -486,7 +486,7 @@ function Footer() {
             <ul className="space-y-2">
               {['Anillos', 'Collares', 'Pulseras', 'Pendientes'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-white/40 text-sm hover:text-[#c9a96e] transition-colors">{item}</a>
+                  <a href="#" className="text-white/40 text-sm hover:text-white transition-colors">{item}</a>
                 </li>
               ))}
             </ul>
@@ -497,7 +497,7 @@ function Footer() {
             <ul className="space-y-2">
               {['Diseño Personalizado', 'Restauración', 'Grabado', 'Certificación'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-white/40 text-sm hover:text-[#c9a96e] transition-colors">{item}</a>
+                  <a href="#" className="text-white/40 text-sm hover:text-white transition-colors">{item}</a>
                 </li>
               ))}
             </ul>
@@ -515,7 +515,7 @@ function Footer() {
                 <a
                   key={social}
                   href="#"
-                  className="w-9 h-9 rounded-full border border-[#0b3b3b] flex items-center justify-center text-white/50 hover:text-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300"
+                  className="w-9 h-9 rounded-full border border-[#0b3b3b] flex items-center justify-center text-white/50 hover:text-white hover:border-white transition-all duration-300"
                 >
                   <span className="text-xs uppercase">{social[0]}</span>
                 </a>

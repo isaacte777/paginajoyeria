@@ -110,9 +110,9 @@ function Navbar() {
             className="flex items-center gap-2"
           >
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/70 flex items-center justify-center">
-              <span className="text-white text-sm sm:text-lg font-bold">L</span>
+              <span className="text-white text-sm sm:text-lg font-bold">N</span>
             </div>
-            <span className="text-base sm:text-xl font-light tracking-[0.3em] text-white">LUXE</span>
+            <span className="text-base sm:text-xl font-light tracking-[0.3em] text-white">NERY JOYAS</span>
           </motion.div>
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
@@ -247,7 +247,7 @@ function HeroSection() {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           <span className="text-white/60 text-[10px] sm:text-xs tracking-[0.4em] sm:tracking-[0.5em] uppercase mb-2 sm:mb-3 block">
-            Colección Exclusiva 2026
+            Joyería y Relojería
           </span>
         </motion.div>
 
@@ -257,9 +257,9 @@ function HeroSection() {
           transition={{ delay: 0.7, duration: 1 }}
           className="text-[2.5rem] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-wide mb-3 sm:mb-4"
         >
-          <span className="text-gradient">Elegancia</span>
+          <span className="text-gradient">Nery</span>
           <br />
-          <span className="text-white/90">Atemporal</span>
+          <span className="text-white/90">Joyas</span>
         </motion.h1>
 
         <motion.p
@@ -268,8 +268,8 @@ function HeroSection() {
           transition={{ delay: 1, duration: 0.8 }}
           className="text-xs sm:text-sm md:text-base text-white/50 font-light max-w-lg sm:max-w-xl mx-auto mb-5 sm:mb-6 leading-relaxed px-2"
         >
-          Descubre piezas únicas creadas con maestría artesanal. Cada joya cuenta una historia 
-          de lujo, pasión y dedicación incomparable.
+          Venta de platería y oro. Reparación y confección de joyas. 
+          Calidad y tradición en cada pieza.
         </motion.p>
 
         <motion.div
@@ -278,13 +278,14 @@ function HeroSection() {
           transition={{ delay: 1.3, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center sm:items-start mb-14 sm:mb-16"
         >
-          <motion.button
+          <motion.a
+            href="tel:0981625570"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(11, 59, 59, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 bg-[#0b3b3b] text-white text-[11px] sm:text-xs tracking-widest uppercase border border-[#0f4f4f] hover:bg-[#0f4f4f] transition-all duration-300"
+            className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 bg-[#0b3b3b] text-white text-[11px] sm:text-xs tracking-widest uppercase border border-[#0f4f4f] hover:bg-[#0f4f4f] transition-all duration-300 text-center"
           >
-            Explorar Colección
-          </motion.button>
+            Contactar Ahora
+          </motion.a>
           <motion.button
             whileHover={{ scale: 1.05, borderColor: '#ffffff' }}
             whileTap={{ scale: 0.95 }}
@@ -368,22 +369,22 @@ function WelcomeSection() {
               Bienvenidos
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight text-white mb-5 sm:mb-6 md:mb-8 leading-tight">
-              Donde el Arte se encuentra con la <span className="text-gradient">Perfección</span>
+              Tu joyería de <span className="text-gradient">confianza</span> en Capiatá
             </h2>
             <div className="space-y-4 sm:space-y-5 md:space-y-6 text-white/60 text-sm sm:text-base font-light leading-relaxed">
               <p>
-                En <span className="text-white">Luxe Joyería</span>, cada pieza es una obra maestra 
-                que trasciende el tiempo. Desde 1985, hemos dedicado nuestra pasión a crear joyas 
-                que capturan la esencia de la elegancia y la sofisticación.
+                En <span className="text-white">Nery Joyas</span> nos especializamos en joyería y relojería. 
+                Ofrecemos venta de platería y oro, así como reparación y confección de joyas 
+                con la calidad y dedicación que mereces.
               </p>
               <p className="hidden sm:block">
-                Nuestros artesanos combinan técnicas ancestrales con diseños contemporáneos, 
-                utilizando solo los materiales más selectos: diamantes de calidad excepcional, 
-                oro de 18 quilates y gemas preciosas cuidadosamente seleccionadas.
+                Contamos con años de experiencia en el rubro, brindando un servicio personalizado 
+                y productos de la más alta calidad. Cada pieza es seleccionada y trabajada con 
+                atención al detalle.
               </p>
               <p className="hidden md:block">
-                Cada creación es un testimonio de nuestro compromiso con la excelencia, 
-                diseñada para ser atesorada por generaciones.
+                Visítanos en Capiatá y descubre nuestra amplia variedad de joyas, 
+                relojes y artículos de platería para toda ocasión.
               </p>
             </div>
 
@@ -395,20 +396,9 @@ function WelcomeSection() {
                   viewport={{ once: true }}
                   className="text-2xl sm:text-3xl text-gradient font-light"
                 >
-                  40+
+                  672+
                 </motion.span>
-                <p className="text-white/40 text-xs sm:text-sm mt-1 tracking-wider">Años de experiencia</p>
-              </div>
-              <div>
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  className="text-2xl sm:text-3xl text-gradient font-light"
-                >
-                  5000+
-                </motion.span>
-                <p className="text-white/40 text-xs sm:text-sm mt-1 tracking-wider">Piezas creadas</p>
+                <p className="text-white/40 text-xs sm:text-sm mt-1 tracking-wider">Seguidores</p>
               </div>
               <div>
                 <motion.span
@@ -419,7 +409,18 @@ function WelcomeSection() {
                 >
                   100%
                 </motion.span>
-                <p className="text-white/40 text-xs sm:text-sm mt-1 tracking-wider">Artesanal</p>
+                <p className="text-white/40 text-xs sm:text-sm mt-1 tracking-wider">Calidad</p>
+              </div>
+              <div>
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="text-2xl sm:text-3xl text-gradient font-light"
+                >
+                  ⭐
+                </motion.span>
+                <p className="text-white/40 text-xs sm:text-sm mt-1 tracking-wider">Recomendados</p>
               </div>
             </div>
           </motion.div>
@@ -434,50 +435,50 @@ function WelcomeSection() {
 function ProductsSection() {
   const products = [
     {
-      name: 'Anillo Eternity',
+      name: 'Anillos de Oro',
       category: 'Anillos',
-      price: '€2,450',
-      description: 'Oro blanco 18k con diamantes',
+      price: 'Consultar',
+      description: 'Anillos en oro de diferentes quilates',
       icon: <RingIcon />,
       image: 'https://image.qwenlm.ai/generated-images/0a35c0ae-97aa-4222-91a3-20597ea7bde9/_result.png',
     },
     {
-      name: 'Collar Celestial',
+      name: 'Cadenas y Collares',
       category: 'Collares',
-      price: '€3,800',
-      description: 'Oro rosa con zafiro azul',
+      price: 'Consultar',
+      description: 'Cadenas de oro y plata de alta calidad',
       icon: <NecklaceIcon />,
       image: 'https://image.qwenlm.ai/generated-images/eb8bbc52-3480-4c09-82b5-8a3433849ea4/_result.png',
     },
     {
-      name: 'Pulsera Aurora',
+      name: 'Pulseras de Plata',
       category: 'Pulseras',
-      price: '€1,950',
-      description: 'Oro amarillo con esmeraldas',
+      price: 'Consultar',
+      description: 'Pulseras en plata y oro para toda ocasión',
       icon: <BraceletIcon />,
       image: 'https://image.qwenlm.ai/generated-images/78f2ae4e-a7a2-4c46-84b5-9bf2241fe3b2/_result.png',
     },
     {
-      name: 'Pendientes Luna',
+      name: 'Aros y Pendientes',
       category: 'Pendientes',
-      price: '€1,200',
-      description: 'Platino con perlas del Mar del Sur',
+      price: 'Consultar',
+      description: 'Aros en oro, plata y piedras preciosas',
       icon: <EarringIcon />,
       image: 'https://image.qwenlm.ai/generated-images/0be7f091-1b38-4f83-a798-d1979847b491/_result.png',
     },
     {
-      name: 'Reloj Imperial',
+      name: 'Relojes',
       category: 'Relojes',
-      price: '€8,500',
-      description: 'Acero y oro con diamantes',
+      price: 'Consultar',
+      description: 'Relojes de diferentes marcas y estilos',
       icon: <WatchIcon />,
       image: 'https://image.qwenlm.ai/generated-images/60137e18-62a4-4ded-8ebf-643293d8049a/_result.png',
     },
     {
-      name: 'Brazalete Royale',
-      category: 'Brazaletes',
-      price: '€4,200',
-      description: 'Oro blanco con rubíes birmanos',
+      name: 'Reparación de Joyas',
+      category: 'Servicios',
+      price: 'Consultar',
+      description: 'Reparación y confección de joyas a medida',
       icon: <BangleIcon />,
       image: 'https://image.qwenlm.ai/generated-images/2e3f240b-a1fe-45b7-a67b-bb427b565ce5/_result.png',
     },
@@ -497,13 +498,13 @@ function ProductsSection() {
           className="text-center mb-10 sm:mb-14 md:mb-20 px-2"
         >
           <span className="text-[#0f4f4f] text-xs sm:text-sm tracking-[0.4em] uppercase mb-3 sm:mb-4 block">
-            Nuestras Creaciones
+            Nuestros Productos
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight text-white mb-4 sm:mb-6">
-            Colección <span className="text-gradient">Exclusiva</span>
+            Platería y <span className="text-gradient">Oro</span>
           </h2>
           <p className="text-white/50 text-sm sm:text-base font-light max-w-xl mx-auto">
-            Cada pieza es única, creada con los materiales más finos y una dedicación artesanal incomparable.
+            Amplia variedad de joyas en oro y plata, relojes y servicios de reparación y confección.
           </p>
         </motion.div>
 
@@ -578,13 +579,14 @@ function ProductsSection() {
           viewport={{ once: true }}
           className="text-center mt-10 sm:mt-12 md:mt-16 px-4"
         >
-          <motion.button
+          <motion.a
+            href="tel:0981625570"
             whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(11, 59, 59, 0.3)' }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 border border-white/30 text-white text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase hover:bg-white/5 transition-all duration-300"
+            className="w-full sm:w-auto inline-block px-8 sm:px-10 py-3.5 sm:py-4 border border-white/30 text-white text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase hover:bg-white/5 transition-all duration-300"
           >
-            Ver Toda la Colección
-          </motion.button>
+            Consultar Disponibilidad
+          </motion.a>
         </motion.div>
       </div>
     </section>
@@ -601,22 +603,22 @@ function Footer() {
           <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
             <div className="flex items-center gap-2 mb-3 sm:mb-4 justify-center sm:justify-start">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/50 flex items-center justify-center">
-                <span className="text-white text-xs sm:text-sm font-bold">L</span>
+                <span className="text-white text-xs sm:text-sm font-bold">N</span>
               </div>
-              <span className="text-base sm:text-lg font-light tracking-[0.3em] text-white">LUXE</span>
+              <span className="text-base sm:text-lg font-light tracking-[0.3em] text-white">NERY JOYAS</span>
             </div>
             <p className="text-white/40 text-xs sm:text-sm font-light leading-relaxed max-w-xs mx-auto sm:mx-0">
-              Joyería artesanal de lujo. Creando piezas únicas desde 1985.
+              Joyería y relojería. Venta de platería y oro. Reparación y confección de joyas.
             </p>
           </div>
 
           {/* Links */}
           <div className="text-center sm:text-left">
-            <h4 className="text-white text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4">Colecciones</h4>
+            <h4 className="text-white text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4">Productos</h4>
             <ul className="space-y-2">
-              {['Anillos', 'Collares', 'Pulseras', 'Pendientes'].map((item) => (
+              {['Anillos de Oro', 'Cadenas y Collares', 'Pulseras de Plata', 'Aros y Pendientes'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-white/40 text-xs sm:text-sm hover:text-white transition-colors">{item}</a>
+                  <a href="#colecciones" className="text-white/40 text-xs sm:text-sm hover:text-white transition-colors">{item}</a>
                 </li>
               ))}
             </ul>
@@ -625,9 +627,9 @@ function Footer() {
           <div className="text-center sm:text-left">
             <h4 className="text-white text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4">Servicios</h4>
             <ul className="space-y-2">
-              {['Diseño Personalizado', 'Restauración', 'Grabado', 'Certificación'].map((item) => (
+              {['Reparación de Joyas', 'Confección a Medida', 'Venta de Oro', 'Venta de Plata'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-white/40 text-xs sm:text-sm hover:text-white transition-colors">{item}</a>
+                  <a href="#contacto" className="text-white/40 text-xs sm:text-sm hover:text-white transition-colors">{item}</a>
                 </li>
               ))}
             </ul>
@@ -636,12 +638,13 @@ function Footer() {
           <div className="text-center sm:text-left">
             <h4 className="text-white text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4">Contacto</h4>
             <ul className="space-y-2 text-white/40 text-xs sm:text-sm">
-              <li>📍 Calle Gran Vía 45, Madrid</li>
-              <li>📞 +34 912 345 678</li>
-              <li>✉️ info@luxejoyeria.com</li>
+              <li>📍 Supermercado Real Ruta 1</li>
+              <li>Mariscal Francisco Solano López</li>
+              <li>Capiatá, Asunción, Paraguay</li>
+              <li className="pt-2">📞 <a href="tel:0981625570" className="hover:text-white transition-colors">0981 625570</a></li>
             </ul>
             <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6 justify-center sm:justify-start">
-              {['instagram', 'facebook', 'twitter'].map((social) => (
+              {['instagram', 'facebook'].map((social) => (
                 <a
                   key={social}
                   href="#"
@@ -658,7 +661,7 @@ function Footer() {
         <div className="glow-line w-full mt-8 sm:mt-10 md:mt-12 mb-6 sm:mb-8" />
 
         <div className="text-center text-white/30 text-[10px] sm:text-xs tracking-wider">
-          © 2026 Luxe Joyería. Todos los derechos reservados.
+          © 2026 Nery Joyas. Todos los derechos reservados.
         </div>
       </div>
     </footer>

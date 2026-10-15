@@ -1,6 +1,83 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+// ==================== SVG ICONS ====================
+
+const RingIcon = () => (
+  <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <circle cx="32" cy="36" r="16" />
+    <circle cx="32" cy="36" r="12" />
+    <path d="M24 24 L32 12 L40 24" strokeLinejoin="round" />
+    <path d="M28 20 L32 14 L36 20" fill="currentColor" opacity="0.3" />
+    <circle cx="32" cy="14" r="3" fill="currentColor" opacity="0.5" />
+  </svg>
+);
+
+const NecklaceIcon = () => (
+  <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <path d="M16 12 C16 12 14 32 32 44 C50 32 48 12 48 12" />
+    <path d="M20 14 C20 14 18 30 32 40 C46 30 44 14 44 14" />
+    <circle cx="32" cy="44" r="4" fill="currentColor" opacity="0.4" />
+    <path d="M28 44 L32 50 L36 44" fill="currentColor" opacity="0.3" />
+  </svg>
+);
+
+const BraceletIcon = () => (
+  <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <ellipse cx="32" cy="32" rx="20" ry="14" />
+    <ellipse cx="32" cy="32" rx="16" ry="10" />
+    <circle cx="18" cy="30" r="2" fill="currentColor" opacity="0.4" />
+    <circle cx="32" cy="18" r="2" fill="currentColor" opacity="0.4" />
+    <circle cx="46" cy="30" r="2" fill="currentColor" opacity="0.4" />
+    <circle cx="32" cy="46" r="2" fill="currentColor" opacity="0.4" />
+  </svg>
+);
+
+const EarringIcon = () => (
+  <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <circle cx="24" cy="16" r="3" />
+    <line x1="24" y1="19" x2="24" y2="32" />
+    <circle cx="24" cy="36" r="5" fill="currentColor" opacity="0.3" />
+    <path d="M20 36 L24 44 L28 36" fill="currentColor" opacity="0.2" />
+    <circle cx="40" cy="16" r="3" />
+    <line x1="40" y1="19" x2="40" y2="32" />
+    <circle cx="40" cy="36" r="5" fill="currentColor" opacity="0.3" />
+    <path d="M36 36 L40 44 L44 36" fill="currentColor" opacity="0.2" />
+  </svg>
+);
+
+const WatchIcon = () => (
+  <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <rect x="18" y="20" width="28" height="24" rx="4" />
+    <circle cx="32" cy="32" r="9" />
+    <line x1="32" y1="32" x2="32" y2="26" />
+    <line x1="32" y1="32" x2="37" y2="32" />
+    <line x1="18" y1="28" x2="10" y2="24" />
+    <line x1="18" y1="36" x2="10" y2="40" />
+    <line x1="46" y1="28" x2="54" y2="24" />
+    <line x1="46" y1="36" x2="54" y2="40" />
+    <circle cx="32" cy="32" r="1.5" fill="currentColor" />
+  </svg>
+);
+
+const BangleIcon = () => (
+  <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <ellipse cx="32" cy="32" rx="22" ry="16" />
+    <ellipse cx="32" cy="32" rx="18" ry="12" />
+    <path d="M14 28 Q14 24 18 24" />
+    <path d="M50 28 Q50 24 46 24" />
+    <circle cx="32" cy="16" r="3" fill="currentColor" opacity="0.4" />
+    <circle cx="22" cy="20" r="2" fill="currentColor" opacity="0.3" />
+    <circle cx="42" cy="20" r="2" fill="currentColor" opacity="0.3" />
+  </svg>
+);
+
+const DiamondIcon = () => (
+  <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" opacity="0.8" />
+  </svg>
+);
+
 // ==================== COMPONENTS ====================
 
 function Navbar() {
@@ -125,9 +202,7 @@ function HeroSection() {
           className="mb-8"
         >
           <div className="w-24 h-24 mx-auto rounded-full border border-white/40 flex items-center justify-center floating">
-            <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
+            <DiamondIcon />
           </div>
         </motion.div>
 
@@ -230,7 +305,9 @@ function WelcomeSection() {
                     className="w-40 h-40 mx-auto border border-white/20 rounded-full flex items-center justify-center"
                   >
                     <div className="w-28 h-28 border border-white/30 rounded-full flex items-center justify-center">
-                      <span className="text-5xl">💎</span>
+                      <svg className="w-16 h-16 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                      </svg>
                     </div>
                   </motion.div>
                   <p className="mt-6 text-white/40 text-sm tracking-[0.3em] uppercase">Desde 1985</p>
@@ -325,42 +402,48 @@ function ProductsSection() {
       category: 'Anillos',
       price: '€2,450',
       description: 'Oro blanco 18k con diamantes',
-      icon: '💍',
+      icon: <RingIcon />,
+      image: 'https://image.qwenlm.ai/generated-images/0a35c0ae-97aa-4222-91a3-20597ea7bde9/_result.png',
     },
     {
       name: 'Collar Celestial',
       category: 'Collares',
       price: '€3,800',
       description: 'Oro rosa con zafiro azul',
-      icon: '📿',
+      icon: <NecklaceIcon />,
+      image: 'https://image.qwenlm.ai/generated-images/eb8bbc52-3480-4c09-82b5-8a3433849ea4/_result.png',
     },
     {
       name: 'Pulsera Aurora',
       category: 'Pulseras',
       price: '€1,950',
       description: 'Oro amarillo con esmeraldas',
-      icon: '⌚',
+      icon: <BraceletIcon />,
+      image: 'https://image.qwenlm.ai/generated-images/78f2ae4e-a7a2-4c46-84b5-9bf2241fe3b2/_result.png',
     },
     {
       name: 'Pendientes Luna',
       category: 'Pendientes',
       price: '€1,200',
       description: 'Platino con perlas del Mar del Sur',
-      icon: '✨',
+      icon: <EarringIcon />,
+      image: 'https://image.qwenlm.ai/generated-images/0be7f091-1b38-4f83-a798-d1979847b491/_result.png',
     },
     {
       name: 'Reloj Imperial',
       category: 'Relojes',
       price: '€8,500',
       description: 'Acero y oro con diamantes',
-      icon: '⏱️',
+      icon: <WatchIcon />,
+      image: 'https://image.qwenlm.ai/generated-images/60137e18-62a4-4ded-8ebf-643293d8049a/_result.png',
     },
     {
       name: 'Brazalete Royale',
       category: 'Brazaletes',
       price: '€4,200',
       description: 'Oro blanco con rubíes birmanos',
-      icon: '👑',
+      icon: <BangleIcon />,
+      image: 'https://image.qwenlm.ai/generated-images/2e3f240b-a1fe-45b7-a67b-bb427b565ce5/_result.png',
     },
   ];
 
@@ -400,18 +483,27 @@ function ProductsSection() {
               whileHover={{ y: -8 }}
               className="product-card group relative bg-gradient-to-br from-[#0b3b3b]/20 to-black border border-white/10 rounded-sm overflow-hidden"
             >
-              {/* Product Visual */}
-              <div className="relative h-64 bg-gradient-to-br from-[#0b3b3b]/30 to-[#072a2a] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white/5 to-transparent" />
-                <motion.span
-                  className="text-6xl"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  {product.icon}
-                </motion.span>
-                <div className="absolute top-4 right-4 bg-[#0b3b3b] text-white/80 text-xs tracking-wider px-3 py-1 rounded-sm border border-white/10">
+              {/* Product Image */}
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#0b3b3b]/30 to-transparent" />
+                
+                {/* Category badge */}
+                <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm text-white/80 text-xs tracking-wider px-3 py-1.5 border border-white/10">
                   {product.category}
+                </div>
+
+                {/* SVG Icon overlay on hover */}
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-60 transition-opacity duration-500">
+                  <div className="w-12 h-12 text-white/50">
+                    {product.icon}
+                  </div>
                 </div>
               </div>
 
